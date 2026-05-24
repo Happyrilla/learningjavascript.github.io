@@ -70,8 +70,11 @@ one.addEventListener("click", () => {
 });
 </script>
 <script>
-    const something = process.env.NEXT_PUBLIC_skomp
-    console.log(something)
+    fetch("/api/test")
+    .then(res => res.json())
+    .then(data => {
+    console.log(data.value);
+  });
 </script>
 
 </body>
