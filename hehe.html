@@ -11,12 +11,12 @@
         };
     </script>
     <script>
-        const hello = "1.52"
+        const hello = "1.52";
 
         if (typeof hello === "string" && hello.includes(".")) {
-            Math.round(hello);
-            console.log(hello);
-        };
+        const rounded = Math.round(parseFloat(hello));
+        console.log(rounded);
+    }
     </script>
 </body>
 </html>
