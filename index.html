@@ -39,7 +39,7 @@
 <button id="btn">0</button>
 
 <div class="hey">
-    <button id="one">cpc +1 (costs: 50)</button>
+    <button id="one" onclick="add(50)">cpc +1 (costs: 50)</button>
 </div>
 
 <script>
@@ -59,15 +59,14 @@ btn.addEventListener("click", () => {
 <script>
 const one = document.getElementById("one");
 
-one.addEventListener("click", () => {
-    if (cookies >= 50) {
-        cookies -= 50;
-        cpc += 1;
+function add(value) {
+    if (cookies >= value) {
+        cookies -= value
+        cpc += value /= 50;
         localStorage.setItem("cookies", cookies);
         localStorage.setItem("cpc", cpc);
         document.getElementById("btn").innerText = cookies;
-    }
-});
+}};
 </script>
 <script>
     fetch("/api/test")
