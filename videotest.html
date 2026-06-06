@@ -2,9 +2,39 @@
 <head>
     <script src="./video.js"></script>
     <script src="https://kit.fontawesome.com/19b444568b.js" crossorigin="anonymous"></script>
+    <style>
+        .video-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.video-wrapper .example {
+  display: block;
+  width: 100%;
+}
+
+.video-wrapper #btn {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.video-wrapper:hover #btn {
+  opacity: 1;
+}
+    </style>
 </head>
 <body>
+    <div class="video-wrapper">
     <video src="https://cdn-cf-east.streamable.com/video/mp4/06zdis.mp4?Expires=1781018280&Signature=IIDme4gYu5AG8uMykYS2TtbyzhxhUCTFDxMiKT9OEkPQlZpF0Z9eGIQ2xuPEHpGG5rWA7atUTVaQShbOpSKNiUPKaPoKzoVF0SCWp1Emhme9PM5-zsbdJvcJZAHVjDrxpV29kUJjcxcj21ikybci5tnLnDzctg-AqIgP--h-ReUXlTJoIr4fwU4sY9wc6j0DneYAsU7ioXAuItuIxJwFqMaz8CGgvSf0kIb1OR9krkmqu3yJanokD2SpvMVcpL-PwHM~Sze9lMJV0vSmlhWXnQP07W7PyrEfNhGTofjh7Mu73W2JRYVtV8hJzA37F~U-4x8pzIYQo6SPpmPjf2OgoQ__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ" class="example"></video>
     <i class="fa-solid fa-play" id="btn"></i>
+    </div>
 </body>
 </html>
