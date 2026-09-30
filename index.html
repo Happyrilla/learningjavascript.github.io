@@ -50,13 +50,13 @@
 <script>
 let cookies = parseInt(localStorage.getItem("cookies")) || 0;
 let cpc = parseInt(localStorage.getItem("cpc")) || 1;
-let multi = parseInt(localStorage.getItem("multi")) || 0;
+let multi = parseInt(localStorage.getItem("multi")) || 1;
 
 const btn = document.getElementById("btn");
 btn.innerText = cookies;
 
 btn.addEventListener("click", () => {
-    cookies += cpc *= multi;
+    cookies += cpc * multi;
     btn.innerText = cookies;
     localStorage.setItem("cookies", cookies);
 });
@@ -68,7 +68,7 @@ const one = document.getElementById("one");
 function add(value) {
     if (cookies >= value) {
         cookies -= value
-        cpc += value /= 50 *= multi;
+        cpc += value /= 50 * multi;
         if (typeof cpc === "string" && cpc.includes(".")) {
         const rounded = Math.round(parseFloat(cpc));}
         localStorage.setItem("cookies", cookies);
@@ -77,13 +77,13 @@ function add(value) {
 }};
 function multi() {
     if (cookies >= 1000) {
-        if (multi = 0) {multi += 1; localStorage.setItem ("multi", multi); cookies -= 1000} {multi = multi * 2; localStorage.setItem ("multi", multi); cookies -= 1000}
+        multi = multi * 2; localStorage.setItem ("multi", multi); cookies -= 1000
     }
 }
 function reset() {
     cookies = 0
     cpc = 1
-    multi = 0
+    multi = 1
     localStorage.setItem("cookies", "0")
     localStorage.setItem("cpc", "1")
     localStorage.setItem("multi", "0")
