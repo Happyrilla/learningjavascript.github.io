@@ -43,6 +43,7 @@
     <button id="one" onclick="add(100)">cpc +2 (costs: 100)</button>
 
 </div>
+<button id="one" onclick="reset()">Reset all (DAnGer)</button>
 
 <script>
 let cookies = parseInt(localStorage.getItem("cookies")) || 0;
@@ -71,6 +72,13 @@ function add(value) {
         localStorage.setItem("cpc", cpc);
         document.getElementById("btn").innerText = cookies;
 }};
+function reset() {
+    cookies = 0
+    cpc = 1
+    localStorage.setItem("cookies", "0")
+    localStorage.setItem("cpc", "1")
+    btn.innerText = cookies;
+}
 </script>
 <script>
     fetch("/api/test")
