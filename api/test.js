@@ -1,4 +1,3 @@
 const key = process.env.skomp || process.env.skomp;
-function getkey() {
-  return key
-}
+var thing = document.querySelector("#1")
+thing.innerText = key
