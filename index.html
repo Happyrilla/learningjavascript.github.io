@@ -75,7 +75,7 @@ function add(value) {
 }};
 function multi() {
     if (cookies >= 1000) {
-        if (multi = 0) {multi += 1; localStorage.setItem ("multi", multi)} else {multi = multi * 2; localStorage.setItem ("multi", multi)}
+        if (multi = 0) {multi += 1; localStorage.setItem ("multi", multi); cookies -= 1000} {multi = multi * 2; localStorage.setItem ("multi", multi); cookies -= 1000}
     }
 }
 function reset() {
