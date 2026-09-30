@@ -68,7 +68,7 @@ const one = document.getElementById("one");
 function add(value) {
     if (cookies >= value) {
         cookies -= value
-        cpc += value /= 50 * multi;
+        cpc += value /= 50;
         if (typeof cpc === "string" && cpc.includes(".")) {
         const rounded = Math.round(parseFloat(cpc));}
         localStorage.setItem("cookies", cookies);
